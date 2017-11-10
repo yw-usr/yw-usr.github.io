@@ -1,18 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Barlow|Barlow+Semi+Condensed:700" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 </head>
 <body>
-	<canvas id="myCanvas" resize="true"></canvas>
-    <section>
-    <p> dsfjldskgjlkdfjlskjf </p>
+    <div class="header">
+        <div class="background">
+            <canvas id="myCanvas" resize="true"></canvas>
+        </div>
+        <section class="header">
+            <div id="headertext">
+            <h1><span class="responsibility2">a </span><span id="intellectual" class="notresponsibility notcomplex">Intellectual</span><span class="intellectual2">ly </span><span class="complex2">Dealing with</span></h1>
+            
+            <h1>
+                <span class="intellectual2">Re-framing</span><span id="responsibility" class="notintellectual notcomplex"> Responsibility</span><span class="complex2">Changing Requirements</span>
+            </h1>
+            <h2>
+                <span class="intellectual2">highly personal topics</span>
+                <span class="responsibility2"> to be genuine</span>
+                <span class="notresponsibility notintellectual">in a <span id="complex">Complex World</span></span>
+            </h2>
+            </div><div class="intellectual2 responsibility2 complex2">click anywhere to read the post</div>
+            </section>
+    </div> 
+    <section class="bg-light post" id="body">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2>Instructions</h2>
+            <hr class="light">
+            <p class="text-faded text-left"><br>
+                You are seated in a circle with three other strangers. <br>
+                A box of ice-cream sticks will be passed around your group of four players for exactly one round. <br>
+                When you receive the box of sticks, you can take as little or as many sticks from the box, and pass it on to the next person. <br>
+                After the box has been passed around to every player once, your sticks will be collected and counted. <br><br>
+
+                <b><i>As a group</i></b>, if you have collected <b>7 sticks or less in total</b>, no one will get a prize.<br>
+                <b><i>As a group</i></b>, if you have collected <b>at least 8 sticks in total</b>, some players will qualify for a prize.<br><br>
+              
+              The person(s) with the least number of sticks will get a prize. The rest of the players will get nothing. </p>
+                <ul class="text-faded text-left">
+                    
+                    <li>If all 4 players have the same number of sticks, everyone gets $1. </li>
+                    <li>If 3 players are tied for least number of sticks, each winner gets $2.</li>
+                    <li>If 2 players are tied for least number of sticks, each winner gets $3.</li>
+                    <li>If 1 player collects the least number of sticks, he/she gets $6.</li></ul>
+            <p class="text-faded text-left">After each round, the number of winners from the round will be announced. <br> The same activity will be repeated for three rounds.<br><br> </p>
+            <a class="btn btn-default btn-xl js-scroll-trigger" href="#game1">Got it, let's go!</a>
+          </div>
+        </div>
     </section>
-<!-- Load the Paper.js library -->
-<script type="text/javascript" src="dist/paper-full.js"></script>
-<!-- Load external PaperScript and associate it with myCanvas -->
-<script type="text/paperscript" src="line.js" canvas="myCanvas">
-</script>
+    <!-- Load the Paper.js library -->
+    <script type="text/javascript" src="dist/paper-full.js"></script>
+    <!-- Load external PaperScript and associate it with myCanvas -->
+    <script type="text/paperscript" src="line.js" canvas="myCanvas"></script>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for this template -->
+    <script src="scroll.js"></script>
+    <script src="index.js"></script>
+
 </body>
 </html>

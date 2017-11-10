@@ -1,10 +1,14 @@
 html,
 body {
     margin: 0;
-    overflow: hidden;
+    overflow: scroll;
     height: 100%;
+    font-family: 'Barlow', sans-serif;
 }
-
+h1, h2, h3, h4, h5 {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-style: bold;
+}
 /* Scale canvas with resize attribute to full size */
 canvas[resize] {
     width: 100%;
@@ -18,7 +22,41 @@ canvas {
     z-index:-1;
 }
 
-section {
+section.header {
     position: absolute;
+    height: 100%;
     z-index: 0;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    text-align: center;
+    padding: 5% 0;
 }
+.header h1 {
+    font-size: 22vmin;
+    font-style: bold;
+    text-align: center;
+    line-height: 22.4vmin;
+    text-transform: uppercase;
+}
+.header h2 {
+    font-size: 16.3vmin;
+    text-align: center;
+    line-height: 16.3vmin;
+    text-transform: uppercase;
+}
+.header {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+section.post {
+    position: relative;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.responsibility2, .complex2, .intellectual2 {
+    display:none;
+}
+
+
