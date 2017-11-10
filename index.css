@@ -19,5 +19,6 @@ canvas {
 }
 
 section {
+    position: absolute;
     z-index: 0;
 }
