@@ -8,35 +8,42 @@
 })(jQuery);
 
 (function($) {
+    var postActive = false;
+    $('#postlink').click(function(){
+        if (postActive) {
+            $("html, body").animate({ scrollTop: $(window).height()}, 600);
+        }
+        return false;
+    });
     function resetIntellectual() {
         $('.notintellectual').show();
         $('.intellectual2').hide();
-        $('#postlink').removeAttr("href");
+        postActive = false;
     }
     function intellectualText() {
         $('.intellectual2').show();
         $('.notintellectual').hide();
-        $('#postlink').attr('href', "#body");
+        postActive = true;
     }
     function resetResponsibility() {
         $('.notresponsibility').show();
         $('.responsibility2').hide();
-        $('#postlink').removeAttr("href");
+        postActive = false;
     }
     function responsibilityText() {
         $('.notresponsibility').hide();
         $('.responsibility2').show();        
-        $('#postlink').attr('href', "#body");
+        postActive = true;
     }
     function resetComplex() {
         $('.notcomplex').show();
         $('.complex2').hide();
-        $('#postlink').removeAttr("href");
+        postActive = false;
     }
     function complexText() {
         $('.notcomplex').hide();
         $('.complex2').show();        
-        $('#postlink').attr('href', "#body");
+        postActive = true;
     }
     $('#intellectual').hover(intellectualText, resetIntellectual);
     $('#responsibility').hover(responsibilityText, resetResponsibility);
