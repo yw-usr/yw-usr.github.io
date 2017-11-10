@@ -28,7 +28,7 @@ section.header {
     z-index: 0;
     font-family: 'Barlow Semi Condensed', sans-serif;
     text-align: center;
-    padding: 5% 0;
+    padding: 10% 0;
 }
 .header h1 {
     font-size: 18vmin;
@@ -59,4 +59,6 @@ section.post {
     display:none;
 }
 
-
+a#postlink {
+    color: black;
+}
