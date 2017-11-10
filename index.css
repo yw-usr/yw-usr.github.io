@@ -31,16 +31,16 @@ section.header {
     padding: 5% 0;
 }
 .header h1 {
-    font-size: 22vmin;
+    font-size: 18vmin;
     font-style: bold;
     text-align: center;
-    line-height: 22.4vmin;
+    line-height: 18vmin;
     text-transform: uppercase;
 }
 .header h2 {
-    font-size: 16.3vmin;
+    font-size: 14.3vmin;
     text-align: center;
-    line-height: 16.3vmin;
+    line-height: 14.3vmin;
     text-transform: uppercase;
 }
 .header {
