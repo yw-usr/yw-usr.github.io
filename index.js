@@ -11,7 +11,7 @@
     var postActive = false;
     $('#postlink').click(function(){
         if (postActive) {
-            $("html, body").animate({ scrollTop: $("#readhere").offset().top}, 600);
+            $("html, body").animate({ scrollTop: $("#readhere").offset().top * 1.1}, 600);
         }
         return false;
     });

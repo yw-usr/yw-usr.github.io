@@ -179,3 +179,7 @@ img.slider-image:nth-child(8) {
     font-family: 'Barlow', sans-serif;
     font-style: none;
 }
+.welcome {
+    padding-top: 0px;
+    margin-top: 0px;
+}
