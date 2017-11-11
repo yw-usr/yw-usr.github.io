@@ -16,7 +16,11 @@
         return false;
     });
     $('.upfooter').click(function(){
-        $("html, body").animate({ scrollTop: $(window).height()*1.1}, 600);
+        $("html, body").animate({ scrollTop: $(window).height()*1.15}, 600);
+        return false;
+    });
+    $('.upheader').click(function(){
+        $("html, body").animate({ scrollTop: 0}, 600);
         return false;
     });
     function resetIntellectual() {
