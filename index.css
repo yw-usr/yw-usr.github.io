@@ -70,7 +70,7 @@ section.post {
     padding-right: 3%;
 }
 
-.responsibility2, .complex2, .intellectual2 {
+.responsibility2, .complex2, .intellectual2, .world2 {
     display:none;
 }
 
@@ -155,4 +155,20 @@ img.slider-image:nth-child(8) {
   100% {
     opacity: 1;
   }
+}
+
+#intellectual {
+    color: aqua;
+}
+
+#responsibility {
+    color: deeppink;
+}
+
+#complex {
+    color: yellowgreen;
+}
+
+#world {
+    color: deepskyblue;
 }

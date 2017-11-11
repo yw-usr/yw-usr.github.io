@@ -53,9 +53,20 @@
         $('.complex2').show();        
         postActive = true;
     }
+    function resetWorld() {
+        $('.notworld').show();
+        $('.world2').hide();
+        postActive = false;
+    }
+    function worldText() {
+        $('.notworld').hide();
+        $('.world2').show();        
+        postActive = true;
+    }
     $('#intellectual').hover(intellectualText, resetIntellectual);
     $('#responsibility').hover(responsibilityText, resetResponsibility);
     $('#complex').hover(complexText, resetComplex);
+    $('#world').hover(worldText, resetWorld);
     
     $('#intellectual').click(function() {
         $('#postiframe').attr("src", "intellectualpost.html");
