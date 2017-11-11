@@ -15,6 +15,10 @@
         }
         return false;
     });
+    $('.upfooter').click(function(){
+        $("html, body").animate({ scrollTop: 0}, 600);
+        return false;
+    });
     function resetIntellectual() {
         $('.notintellectual').show();
         $('.intellectual2').hide();
@@ -48,5 +52,14 @@
     $('#intellectual').hover(intellectualText, resetIntellectual);
     $('#responsibility').hover(responsibilityText, resetResponsibility);
     $('#complex').hover(complexText, resetComplex);
+    
+    $('#intellectual').click(function() {
+        $('#postiframe').attr("src", "intellectualpost.html");
+    });
+    $('#responsibility').click(function() { 
+    });
+    $('#complex').click(function() {   
+        $('#postiframe').attr("src", "complexpost.html");
+    });
 
 })(jQuery); // End of use strict
