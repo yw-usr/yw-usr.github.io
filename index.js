@@ -11,12 +11,16 @@
     var postActive = false;
     $('#postlink').click(function(){
         if (postActive) {
-            $("html, body").animate({ scrollTop: $(window).height()*2}, 600);
+            $("html, body").animate({ scrollTop: $("#readhere").offset().top}, 600);
         }
         return false;
     });
     $('.upfooter').click(function(){
         $("html, body").animate({ scrollTop: $(window).height()*1.15}, 600);
+        return false;
+    })
+    $('.downfooter').click(function(){
+        $('html,body').animate({scrollTop: $("#starthere").offset().top}, 600);
         return false;
     });
     $('.upheader').click(function(){
@@ -76,6 +80,9 @@
     });
     $('#complex').click(function() {   
         $('#postiframe').attr("src", "complexpost.html");
+    });
+    $('#world').click(function() {   
+        $('#postiframe').attr("src", "http://usr-honour-systems.github.io/index.html");
     });
 
 })(jQuery); // End of use strict
