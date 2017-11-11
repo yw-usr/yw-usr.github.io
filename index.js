@@ -65,7 +65,7 @@
     function worldText() {
         $('.notworld').hide();
         $('.world2').show();        
-        postActive = true;
+        postActive = false;
     }
     $('#intellectual').hover(intellectualText, resetIntellectual);
     $('#responsibility').hover(responsibilityText, resetResponsibility);
@@ -82,7 +82,8 @@
         $('#postiframe').attr("src", "complexpost.html");
     });
     $('#world').click(function() {   
-        $('#postiframe').attr("src", "http://usr-honour-systems.github.io/index.html");
+        window.open('http://usr-honour-systems.github.io');
+       // $('#postiframe').attr("src", "http://usr-honour-systems.github.io/index.html");
     });
 
 })(jQuery); // End of use strict
