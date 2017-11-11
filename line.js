@@ -9,6 +9,11 @@ var path = new Path({
 	strokeCap: 'round'
 });
 
+var raster = new Raster('me');
+raster.position = view.center;
+raster.position.x +=200;
+raster.scale(0.3);
+
 var start = view.center / [10, 1];
 for (var i = 0; i < points; i++)
 	path.add(start + new Point(i * length, 0));

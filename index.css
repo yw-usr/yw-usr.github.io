@@ -25,8 +25,20 @@ canvas {
     z-index:-1;
 }
 
+.header {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+div.header {
+    height: 100%;
+    z-index: 0;
+    text-align: center;
+    padding: 10% 0;
+}
+
 section.header {
-    position: absolute;
+    position: relative;
     height: 100%;
     z-index: 0;
     font-family: 'Barlow Semi Condensed', sans-serif;
@@ -34,22 +46,21 @@ section.header {
     padding: 10% 0;
 }
 .header h1 {
-    font-size: 18vmin;
+    font-size: 16vmin;
     font-style: bold;
     text-align: center;
-    line-height: 18vmin;
+    line-height: 16vmin;
     text-transform: uppercase;
 }
 .header h2 {
-    font-size: 14.3vmin;
+    font-size: 12vmin;
     text-align: center;
     line-height: 14.3vmin;
     text-transform: uppercase;
 }
-.header {
-    position: relative;
-    width: 100%;
-    height: 100%;
+
+.welcome {
+    margin: 10%;
 }
 
 section.post {
@@ -75,4 +86,66 @@ iframe {
     border: none;
     width: 100%;
     height: 100vh;
+}
+
+.upfooter {
+    font-size: 0.8em;
+}
+#slider-holder {
+    width: 100vh;
+    height: 60vh;
+    overflow: hidden;
+    position: relative;
+    padding: 0px;
+}
+
+.slider-image
+{   
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+img.slider-image:nth-child(1) {
+  animation: xfade 48s 42s infinite;
+}
+img.slider-image:nth-child(2) {
+  animation: xfade 48s 36s infinite;
+}
+img.slider-image:nth-child(3) {
+  animation: xfade 48s 30s infinite;
+}
+img.slider-image:nth-child(4) {
+  animation: xfade 48s 24s infinite;
+}
+img.slider-image:nth-child(5) {
+  animation: xfade 48s 18s infinite;
+}
+img.slider-image:nth-child(6) {
+  animation: xfade 48s 12s infinite;
+}
+img.slider-image:nth-child(7) {
+  animation: xfade 48s 6s infinite;
+}
+img.slider-image:nth-child(8) {
+  animation: xfade 48s 0s infinite;
+}
+
+@keyframes xfade{
+  0%{
+    opacity: 1;
+  }
+  10.5% {
+    opacity: 1;
+  }
+  12.5%{
+    opacity: 0;
+  }
+  98% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

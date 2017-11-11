@@ -8,10 +8,12 @@
 })(jQuery);
 
 (function($) {
+    $("html, body").animate({ scrollTop: $(window).height()}, 600);
+
     var postActive = false;
     $('#postlink').click(function(){
         if (postActive) {
-            $("html, body").animate({ scrollTop: $(window).height()}, 600);
+            $("html, body").animate({ scrollTop: $(window).height()*2}, 600);
         }
         return false;
     });
@@ -57,6 +59,7 @@
         $('#postiframe').attr("src", "intellectualpost.html");
     });
     $('#responsibility').click(function() { 
+        $('#postiframe').attr("src", "responsibilitypost.html");
     });
     $('#complex').click(function() {   
         $('#postiframe').attr("src", "complexpost.html");
