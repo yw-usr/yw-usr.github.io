@@ -1,41 +1,69 @@
-var points = 25;
-
-// The distance between the points:
-var length = 35;
-
-var path = new Path({
-	strokeColor: '#E4141B',
-	strokeWidth: 20,
-	strokeCap: 'round'
+var rect = new Path.Rectangle({
+    point: [0, 0],
+    size: [view.size.width, view.size.height],
+    strokeColor: 'white',
+    selected: true
 });
+rect.sendToBack();
+rect.fillColor = '#eeeeee';
 
-//var raster = new Raster('me');
-//raster.position = view.center;
-//raster.position.x +=200;
-//raster.scale(0.3);
+var raster = new Raster('me');
+raster.scale(0.25);
+raster.position.x = view.size.width * 7/10;
+raster.position.y = view.size.height/2;
 
-var start = view.center / [10, 1];
-for (var i = 0; i < points; i++)
-	path.add(start + new Point(i * length, 0));
+var width, height, center;
+var points = 10;
+var smooth = true;
+var path = new Path();
+var mousePos = view.center / 2;
+var pathHeight = mousePos.y;
+path.fillColor = 'white';
+initializePath();
+
+function initializePath() {
+	center = view.center;
+	width = view.size.width;
+	height = view.size.height / 2;
+	path.segments = [];
+	path.add(view.bounds.bottomLeft);
+	for (var i = 1; i < points; i++) {
+		var point = new Point(width / points * i, center.y);
+		path.add(point);
+	}
+	path.add(view.bounds.bottomRight);
+	path.fullySelected = false;
+}
+
+function onFrame(event) {
+	pathHeight += (center.y - mousePos.y - pathHeight) / 10;
+	for (var i = 1; i < points; i++) {
+		var sinSeed = event.count + (i + i % 10) * 100;
+		var sinHeight = Math.sin(sinSeed / 200) * pathHeight;
+		var yPos = Math.sin(sinSeed / 100) * sinHeight + height;
+		path.segments[i].point.y = yPos;
+	}
+	if (smooth)
+		path.smooth({ type: 'continuous' });
+}
 
 function onMouseMove(event) {
-	path.firstSegment.point = event.point;
-	for (var i = 0; i < points - 1; i++) {
-		var segment = path.segments[i];
-		var nextSegment = segment.next;
-		var vector = segment.point - nextSegment.point;
-		vector.length = length;
-		nextSegment.point = segment.point - vector;
-	}
-	path.smooth({ type: 'continuous' });
+	mousePos = event.point;
 }
 
 function onMouseDown(event) {
-	path.fullySelected = true;
-	path.strokeColor = '#e08285';
+	smooth = !smooth;
+	if (!smooth) {
+		// If smooth has been turned off, we need to reset
+		// the handles of the path:
+		for (var i = 0, l = path.segments.length; i < l; i++) {
+			var segment = path.segments[i];
+			segment.handleIn = segment.handleOut = null;
+		}
+	}
 }
 
-function onMouseUp(event) {
-	path.fullySelected = false;
-	path.strokeColor = '#e4141b';
+// Reposition the path whenever the window is resized:
+function onResize(event) {
+	initializePath();
 }

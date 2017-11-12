@@ -178,8 +178,14 @@ img.slider-image:nth-child(8) {
     padding-right: 10%;
     font-family: 'Barlow', sans-serif;
     font-style: none;
+    font-size: 1.2vw;
 }
 .welcome {
     padding-top: 0px;
     margin-top: 0px;
+}
+
+.intro {
+    width: 60%;
+    font-size: 1.1vw;
 }
