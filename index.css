@@ -99,11 +99,12 @@ iframe {
     font-size: 0.8em;
 }
 #slider-holder {
-    width: 100vh;
-    height: 60vh;
+    height: 18em;
+    width: 30em;
     overflow: hidden;
     position: relative;
-    padding: 0px;
+     padding-left: 3%;
+    padding-right: 3%;
 }
 
 .slider-image
